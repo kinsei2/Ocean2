@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Marine AI - 부산 해양정보</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header class="top">
+
+<div class="logo">
+🌊 Marine AI
+</div>
+
+<div class="title">
+실시간 부산 해양정보
+</div>
+
+<div class="refresh">
+
+<button id="refreshBtn">
+새로고침
+</button>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="welcome">
+
+<h2>
+부산 연안 실시간 정보
+</h2>
+
+<p>
+국립수산과학원 · 기상청 데이터를 기반으로
+현재 조업 환경을 제공합니다.
+</p>
+
+</section>
+
+<section class="location-card">
+
+<div class="card">
+
+<h3>
+📍 현재 위치
+</h3>
+
+<p id="locationText">
+위치를 확인하는 중...
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+🕒 현재 시각
+</h3>
+
+<p id="timeText">
+--
+</p>
+
+</div>
+
+</section>
+
+<section class="status-grid">
+
+<div class="status">
+
+<h4>🌡 수온</h4>
+
+<div id="waterTemp">
+--
+</div>
+
+<span>℃</span>
+
+</div>
+
+<div class="status">
+
+<h4>💨 풍속</h4>
+
+<div id="windSpeed">
+--
+</div>
+
+<span>m/s</span>
+
+</div>
+
+<div class="status">
+
+<h4>🌊 파고</h4>
+
+<div id="waveHeight">
+--
+</div>
+
+<span>m</span>
+
+</div>
+
+<div class="status">
+
+<h4>🧂 염분</h4>
+
+<div id="salinity">
+--
+</div>
+
+<span>psu</span>
+
+</div>
+
+<div class="status">
+
+<h4>🌡 기온</h4>
+
+<div id="airTemp">
+--
+</div>
+
+<span>℃</span>
+
+</div>
+
+<div class="status">
+
+<h4>☁ 날씨</h4>
+
+<div id="weather">
+-
+</div>
+
+</div>
+
+</section>
+
+<section class="map-section">
+
+<h2>
+🗺 부산 해역 지도
+</h2>
+
+<div id="map"></div>
+
+</section>
+
+<section class="graph-section">
+
+<h2>
+📈 수온 변화
+</h2>
+
+<canvas id="tempChart"></canvas>
+
+</section>
+
+<section class="graph-section">
+
+<h2>
+📊 파고 변화
+</h2>
+
+<canvas id="waveChart"></canvas>
+
+</section>
+
+<section class="ai-section">
+
+<h2>
+🤖 AI 어종 추천
+</h2>
+
+<div class="recommend-box">
+
+<div class="fish-name"
+id="fishName">
+
+분석 중...
+
+</div>
+
+<div
+class="fish-desc"
+id="fishReason">
+
+AI가 해양 정보를 분석하고 있습니다.
+
+</div>
+
+</div>
+
+</section>
