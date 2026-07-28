@@ -218,3 +218,252 @@ AI가 해양 정보를 분석하고 있습니다.
 </div>
 
 </section>
+<section class="danger-section">
+
+    <h2>⚠️ 해상 위험도</h2>
+
+    <div class="danger-card">
+
+        <div class="danger-level">
+
+            <div id="dangerGauge" class="gauge safe">
+                안전
+            </div>
+
+        </div>
+
+        <div class="danger-info">
+
+            <p>
+                현재 파고와 풍속을 분석하여
+                조업 위험도를 표시합니다.
+            </p>
+
+            <ul>
+
+                <li>🟢 안전</li>
+
+                <li>🟡 주의</li>
+
+                <li>🔴 위험</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="score-section">
+
+    <h2>⭐ 오늘의 조업 추천</h2>
+
+    <div class="score-card">
+
+        <div class="score-number" id="fishScore">
+
+            0
+
+        </div>
+
+        <span>/100</span>
+
+    </div>
+
+    <p id="scoreComment">
+
+        데이터를 분석하는 중입니다.
+
+    </p>
+
+</section>
+
+
+<section class="harbor-section">
+
+<h2>
+🚢 부산 주요 항구
+</h2>
+
+<div class="harbor-grid">
+
+<div class="harbor-card">
+
+<h3>감천항</h3>
+
+<p id="gamcheon">
+
+정보 수신 대기...
+
+</p>
+
+</div>
+
+<div class="harbor-card">
+
+<h3>다대포</h3>
+
+<p id="dadaepo">
+
+정보 수신 대기...
+
+</p>
+
+</div>
+
+<div class="harbor-card">
+
+<h3>송도</h3>
+
+<p id="songdo">
+
+정보 수신 대기...
+
+</p>
+
+</div>
+
+<div class="harbor-card">
+
+<h3>기장</h3>
+
+<p id="gijang">
+
+정보 수신 대기...
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="favorite-section">
+
+<h2>
+⭐ 즐겨찾기
+</h2>
+
+<div class="favorite-list">
+
+<button class="favorite-btn">
+
+감천항
+
+</button>
+
+<button class="favorite-btn">
+
+다대포
+
+</button>
+
+<button class="favorite-btn">
+
+기장
+
+</button>
+
+<button class="favorite-btn">
+
+송정
+
+</button>
+
+</div>
+
+</section>
+
+
+<section class="notice-section">
+
+<h2>
+📢 오늘의 안내
+</h2>
+
+<div class="notice-box" id="noticeBox">
+
+실시간 해양 데이터를 불러오는 중입니다.
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<nav class="bottom-nav">
+
+<button>
+
+🏠
+<br>
+홈
+
+</button>
+
+<button>
+
+🗺
+<br>
+지도
+
+</button>
+
+<button>
+
+📊
+<br>
+분석
+
+</button>
+
+<button>
+
+🤖
+<br>
+AI
+
+</button>
+
+<button>
+
+⚙
+<br>
+설정
+
+</button>
+
+</nav>
+
+
+<footer>
+
+<p>
+
+Marine AI © 2026
+
+</p>
+
+<p>
+
+국립수산과학원 · 기상청 · 공공데이터포털 Open API 기반
+
+</p>
+
+</footer>
+
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
